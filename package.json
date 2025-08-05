@@ -1,0 +1,22 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive personal portfolio website showcasing Dylan Ballard's experience as a Full-Stack Software Engineer.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.0.6"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "typescript",
+    "vite"
+  ],
+  "author": "Dylan Ballard",
+  "license": "MIT"
+}
