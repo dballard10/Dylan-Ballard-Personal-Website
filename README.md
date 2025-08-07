@@ -1,12 +1,12 @@
 # Dylan Ballard - Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with Vite, showcasing Dylan Ballard's experience as a Full-Stack Software Engineer.
+A modern, responsive personal portfolio website built with React, TypeScript, and Vite, showcasing Dylan Ballard's experience as a Full-Stack Software Engineer.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Built with Vite for fast development and optimized builds
+- **Modern Tech Stack**: Built with React, TypeScript, and Vite for component-based architecture and type safety
 - **Professional Design**: Clean, dark theme with gradient accents and company/university logos
-- **Logo Integration**: Real logos for companies (Eigennet, Freddie Mac), universities (GMU, JMU), and technologies
+- **Logo Integration**: Custom logos for companies/universities, real technology logos from Simple Icons CDN
 - **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
 - **Interactive Elements**: Smooth scrolling, animations, and hover effects
 - **Contact Form**: Functional contact form with email integration
@@ -15,13 +15,13 @@ A modern, responsive personal portfolio website built with Vite, showcasing Dyla
 
 ## 🛠️ Built With
 
-- **Vite**: Modern build tool for fast development
-- **HTML5**: Semantic markup with proper structure
+- **React**: Component-based UI library for building user interfaces
+- **TypeScript**: Type-safe JavaScript with enhanced development experience
+- **Vite**: Modern build tool for fast development and optimized builds
 - **CSS3**: Modern styling with Flexbox and CSS Grid
-- **JavaScript**: Interactive functionality and form handling
 - **Lucide Icons**: Beautiful, consistent iconography
 - **Inter Font**: Professional typography from Google Fonts
-- **Custom SVG Logos**: Professional logos for companies, universities, and technologies
+- **Professional Logos**: Custom SVG logos for companies/universities, real technology logos via CDN
 
 ## 📱 Sections
 
@@ -49,15 +49,16 @@ A modern, responsive personal portfolio website built with Vite, showcasing Dyla
 
 ### Skills & Technologies
 
-- Technology logos for each skill (React, TypeScript, Python, AWS, etc.)
+- Real technology logos from Simple Icons CDN (React, TypeScript, Python, AWS, etc.)
 - Organized by category: Frontend, Backend, Cloud & DevOps, Tools
-- Interactive skill tags with hover effects
+- Interactive skill tags with hover effects that reveal original logo colors
 
 ### Projects
 
 - Featured projects: Cinetik and Chess Opening Guide
-- Technology stack visualization with logos
+- Technology stack visualization with real logos from Simple Icons CDN
 - Project descriptions with live demo links
+- Hover effects reveal original technology logo colors
 
 ### Contact
 
@@ -77,15 +78,28 @@ A modern, responsive personal portfolio website built with Vite, showcasing Dyla
 ## 📁 File Structure
 
 ```
-├── index.html                    # Main HTML file
+├── index.html                    # Main HTML file (React root)
 ├── src/
-│   ├── main.js                  # JavaScript entry point
-│   └── styles.css               # CSS styling and responsive design
+│   ├── main.tsx                 # React entry point
+│   ├── App.tsx                  # Main React application component
+│   ├── styles.css               # CSS styling and responsive design
+│   ├── components/              # React components
+│   │   ├── Hero.tsx            # Hero section component
+│   │   ├── About.tsx           # About section component
+│   │   ├── Experience.tsx      # Experience section component
+│   │   ├── Education.tsx       # Education section component
+│   │   ├── Skills.tsx          # Skills section component
+│   │   ├── Projects.tsx        # Projects section component
+│   │   ├── Contact.tsx         # Contact form component
+│   │   └── Footer.tsx          # Footer component
+│   └── hooks/                   # Custom React hooks
+│       ├── useScrollAnimations.ts # Scroll animation hook
+│       └── useNotification.ts   # Notification system hook
+├── tsconfig.json                # TypeScript configuration
 ├── assets/
 │   └── logos/
 │       ├── companies/           # Company logos (Eigennet, Freddie Mac)
-│       ├── universities/        # University logos (GMU, JMU)
-│       └── technologies/        # Technology logos (React, Python, etc.)
+│       └── universities/        # University logos (GMU, JMU)
 ├── public/
 │   └── DylanBallardResume2025.pdf  # Resume PDF
 ├── package.json                 # Project dependencies and scripts
@@ -115,13 +129,19 @@ A modern, responsive personal portfolio website built with Vite, showcasing Dyla
    npm run dev
    ```
 
-4. **Build for production**:
+4. **Type-check TypeScript**:
+
+   ```bash
+   npm run type-check
+   ```
+
+5. **Build for production**:
 
    ```bash
    npm run build
    ```
 
-5. **Preview production build**:
+6. **Preview production build**:
    ```bash
    npm run preview
    ```
@@ -144,11 +164,19 @@ For production use, consider integrating with:
 
 ## 🎯 Customization
 
-### Adding New Logos
+### Adding New Company/University Logos
 
 1. Create SVG files in the appropriate `assets/logos/` subdirectory
 2. Update the HTML to reference the new logo
 3. Adjust CSS if needed for sizing and positioning
+
+### Technology Logos
+
+Technology logos are automatically loaded from the Simple Icons CDN:
+
+- Real, official logos from major tech companies
+- Always up-to-date and consistent styling
+- Replace the CDN URLs in the HTML if you want different technology logos
 
 ### Colors
 
