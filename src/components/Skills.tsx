@@ -78,9 +78,6 @@ const Skills = () => {
                 <span>FastAPI</span>
               </div>
               <div className="skill-tag">
-                <span>RESTful APIs</span>
-              </div>
-              <div className="skill-tag">
                 <img
                   src="/assets/technologies/sql-database-generic-svgrepo-com.svg"
                   alt="PostgreSQL"

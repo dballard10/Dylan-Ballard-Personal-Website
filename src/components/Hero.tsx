@@ -39,12 +39,9 @@ const Hero = () => {
               <span className="greeting">Hi, I'm</span>
               <span className="name">Dylan Ballard</span>
             </h1>
-            <p className="tagline">Build.Deploy.Scale.</p>
             <p className="hero-description">
-              Full-stack Software Engineer with a knack for building clean,
-              responsive user interfaces and scalable backend systems.
-              Experienced in developing modern web apps using React + TypeScript
-              on the frontend and Python + FastAPI on the backend.
+              I'm a Full-stack Software Engineer with a knack for building
+              clean, responsive user interfaces and scalable backend systems.
             </p>
             <div className="hero-buttons">
               <a href="#contact" className="btn btn-primary">

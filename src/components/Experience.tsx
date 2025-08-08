@@ -22,21 +22,22 @@ const Experience = () => {
                 </div>
               </div>
               <ul className="job-details">
-                <li>Developed secure AWS-based document transmission system</li>
+                <li>
+                  Automated metadata and document transmission using Python +
+                  integrated APIs
+                </li>
+                <li>
+                  Developed scalable Python scripts for validation and
+                  transmission tasks
+                </li>
                 <li>
                   Built high-speed LLM extraction in SageMaker with 99% accuracy
                 </li>
                 <li>
-                  Automated metadata packaging, zip creation, and SFTP delivery
-                </li>
-                <li>
                   Led end-to-end EC2/S3 workflows and maintained batch tracking
-                  via internal APIs
+                  via internal API
                 </li>
-                <li>
-                  Developed scalable Python/Django scripts for validation and
-                  transmission pipelines
-                </li>
+                <li>Managed AWS systems and workflows</li>
               </ul>
             </div>
           </div>
@@ -53,23 +54,23 @@ const Experience = () => {
                   />
                 </div>
                 <div className="job-details-header">
-                  <h3>Software Engineering Intern</h3>
+                  <h3>Software Engineer Intern</h3>
                   <span className="company">Freddie Mac</span>
                   <span className="period">2023</span>
                 </div>
               </div>
               <ul className="job-details">
                 <li>
-                  Designed & implemented a Java-based data-validation tool
+                  Designed & implemented a Java-based data-validation system
                 </li>
                 <li>
-                  Detect anomalies and schema drift across large financial CSV
-                  datasets
+                  Detected anomalies and schema drift across large financial CSV
+                  datasets.
                 </li>
                 <li>Integrated automated alerts for version mismatches</li>
                 <li>
                   Boosting data-integrity checks and speeding up the Financial
-                  Engineering team's reconciliation process
+                  Engineering team’s reconciliation process.
                 </li>
               </ul>
             </div>
