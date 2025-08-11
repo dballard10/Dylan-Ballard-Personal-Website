@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { useNotification } from "../hooks/useNotification";
+import { sendContactEmail } from "../utils/emailApi";
 
 interface ContactFormData {
   firstName: string;
@@ -49,7 +50,7 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm(formData)) {
@@ -58,27 +59,12 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      // Create mailto link
-      const subject = encodeURIComponent(
-        `Contact from ${formData.firstName} ${formData.lastName}`
-      );
-      const body = encodeURIComponent(
-        `Name: ${formData.firstName} ${formData.lastName}\n` +
-          `Email: ${formData.email}\n` +
-          `Phone: ${formData.phone}\n\n` +
-          `Message:\n${formData.message}`
-      );
-
-      const mailtoLink = `mailto:dylanballard55@gmail.com?subject=${subject}&body=${body}`;
-
-      // Open default email client
-      window.location.href = mailtoLink;
+    try {
+      await sendContactEmail(formData);
 
       // Show success message
       showNotification(
-        "Message prepared! Your email client should open with the message ready to send.",
+        "Message sent successfully! I'll get back to you soon.",
         "success"
       );
 
@@ -90,9 +76,16 @@ const Contact = () => {
         phone: "",
         message: "",
       });
-
+    } catch (error) {
+      // Show error message
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Failed to send message. Please try again.";
+      showNotification(errorMessage, "error");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleInputChange = (

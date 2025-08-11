@@ -5,6 +5,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "allowJs": true,
+    "types": ["vite/client"],
 
     /* React */
     "jsx": "react-jsx",

@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "dev:full": "npm run build && node server.js",
+    "start": "node server.js"
   },
   "devDependencies": {
     "@types/node": "^24.2.0",
@@ -27,7 +29,10 @@
   "author": "Dylan Ballard",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "resend": "^6.0.1"
   }
 }
