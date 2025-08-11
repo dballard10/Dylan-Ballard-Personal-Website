@@ -7,9 +7,9 @@ const About = () => {
           <p>
             I'm a software engineer currently pursuing my Master's in Computer
             Science at George Mason University. I am experienced in developing
-            modern web apps using React + TypeScript on the frontend and Python
-            + FastAPI on the backend. I build efficient, scalable apps. I'm
-            always eager to take on new challenges and expand my knowledge.
+            modern, efficient, and scalable web apps using React + TypeScript on
+            the frontend and Python + FastAPI on the backend. I'm always eager
+            to take on new challenges and grow my knowledge.
           </p>
         </div>
       </div>

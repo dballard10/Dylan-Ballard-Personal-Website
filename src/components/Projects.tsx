@@ -59,11 +59,14 @@ const Projects = () => {
                 />
               </div>
               <p className="project-description">
-                Built a full-stack movie recommendation platform with React +
-                TypeScript frontend and FastAPI backend. Integrated TMDB data
-                via TanStack Query + Zustand state management, deployed with
-                scalable PostgreSQL database layer and responsive UI using
-                Tailwind CSS.
+                Web app (www.cinetik.app) for discovering movies and TV shows
+                where users can add favorites and watches. Built with React +
+                TypeScript on the frontend and FastAPI on the backend, hosted on
+                Vercel. Integrated TMDB for movie and TV show data, retrieved
+                via TanStack Query with Zustand for state management. Deployed a
+                scalable PostgreSQL database layer and created a backend API to
+                manage favorites and watched movies. Designed a responsive UI
+                using Tailwind CSS.
               </p>
               <div className="project-links">
                 <a
@@ -107,11 +110,11 @@ const Projects = () => {
                 />
               </div>
               <p className="project-description">
-                Developed an interactive chess learning platform with React &
-                TypeScript, integrating Chess.js and react-chessboard for
-                interactive play. Managed global state via Zustand and added
-                searchable openings, variations, sandbox board, and themed
-                boards.
+                Developed (chess-opening-guide.vercel.app) with React &
+                TypeScript. Managed global state with Zustand and implemented
+                searchable openings, opening variations, free play board, and
+                themed boards. Deployed the mobile-first build to Vercel using
+                modern tooling for fast, production-grade performance.
               </p>
               <div className="project-links">
                 <a

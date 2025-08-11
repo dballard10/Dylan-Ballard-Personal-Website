@@ -161,6 +161,14 @@ const Skills = () => {
                 />
                 <span>Node.js</span>
               </div>
+              <div className="skill-tag">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg"
+                  alt="Vercel"
+                  className="tech-logo"
+                />
+                <span>Vercel</span>
+              </div>
             </div>
           </div>
         </div>
