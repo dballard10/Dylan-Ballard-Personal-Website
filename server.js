@@ -4,9 +4,6 @@ import cors from "cors";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
-// Import the API handler
-import emailHandler from "./api/send-email.js";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -20,9 +17,26 @@ app.use(express.json());
 // Serve static files from dist folder
 app.use(express.static(join(__dirname, "dist")));
 
-// API routes
-app.all("/api/send-email", (req, res) => {
-  emailHandler(req, res);
+// API routes - Simple fallback for development
+app.post("/api/send-email", (req, res) => {
+  // For local development, just log the form data and return success
+  console.log("📧 Contact form submission (development mode):", req.body);
+
+  // Simulate email sending delay
+  setTimeout(() => {
+    res.json({
+      message:
+        "Email sent successfully! (Development mode - no actual email sent)",
+      id: `dev_${Date.now()}`,
+    });
+  }, 1000);
+});
+
+app.options("/api/send-email", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.status(200).end();
 });
 
 // Fallback to serve index.html for client-side routing
